@@ -1,0 +1,32 @@
+<html>
+<body>
+{{ date }}
+
+
+<table id="detailTable" class='table table-striped table-bordered'>
+<thead>
+<th>Rental ID</th>
+<th>Date Created</th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Rate</th>
+<th>Customer ID</th>
+<th>Cage ID</th>
+<th>Coaching Session ID</th>
+<th>Meeting Room</th>
+</thead>
+<tbody>
+{% for c in obj %}
+<tr>
+<td>{{ c.raid }}</td>
+<td>{{ c.datecreated }}</td>
+<td>{{ c.startdate }}</td>
+<td>{{ c.enddate }}</td>
+<td>{{ c.rate }}</td>
+<td>{{ c.customerid.fname }}
+{{c.customerid.lname }} </td>
+<td>{{ c.cageid.cageid }}</td>
+<td>{{ c.coach_sessionid.csid }}</td>
+<td>{{ c.meeting_roomid.meetid }}</td>
+</tr>{% endfor %}</tbody>
+</table>
